@@ -3,6 +3,7 @@ package com.example.bankcards.entity;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.OneToMany;
 import java.time.LocalDateTime;
 import java.util.List;
@@ -51,7 +52,7 @@ public class User extends BaseEntity {
 
     @OneToMany(
             mappedBy = "user",
-            cascade = {CascadeType.MERGE, CascadeType.PERSIST})
+            cascade = {CascadeType.MERGE, CascadeType.PERSIST},fetch = FetchType.EAGER)
     private List<UserRole> userRoles;
 
 }

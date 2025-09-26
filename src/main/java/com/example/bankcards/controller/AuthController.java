@@ -30,7 +30,7 @@ public class AuthController {
     }
 
 
-    @PostMapping
+    @PostMapping(value = "/refresh")
     public ResponseEntity<SigninResponseDto> refreshToken(@RequestBody @Validated final RefreshTokenRequestDto request) {
         log.info("Refreshing token: {}", request);
         SigninResponseDto responseDto = authService.refreshToken(request);

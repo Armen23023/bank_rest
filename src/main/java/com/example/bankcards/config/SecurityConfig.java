@@ -52,6 +52,7 @@ public class SecurityConfig {
                 .authorizeHttpRequests(req -> req
                         .requestMatchers("/api/v1/signup/**").permitAll() // allow signup
                         .requestMatchers("/api/v1/signin").permitAll()   // allow signin
+                        .requestMatchers("/api/v1/refresh").permitAll()   // allow signin
                         .anyRequest().authenticated())
                 .sessionManagement(session ->
                         session.sessionCreationPolicy(SessionCreationPolicy.STATELESS)

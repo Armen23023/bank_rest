@@ -7,6 +7,8 @@ import lombok.Getter;
 @AllArgsConstructor
 public enum CardStatus {
     ACTIVE,
-    BLOCKED
+    BLOCKED,
+    PENDING,
+    EXPIRED
 }
 

@@ -170,3 +170,30 @@ databaseChangeLog:
             referencedTableName: user
             referencedColumnNames: id
             constraintName: fk_user_role_user
+
+  - changeSet:
+      id: Add card_type column to card table.
+      author: Armen Mirzoyan
+      changes:
+        - addColumn:
+            columns:
+              - column:
+                  name: card_type
+                  type: CHAR(36)
+            tableName: card
+  - changeSet:
+      id: change-balance-to-decimal
+      author: Armen Mirzoyan
+      changes:
+        - modifyDataType:
+            tableName: card
+            columnName: balance
+            newDataType: DECIMAL(19,2)
+  - changeSet:
+      id: change-card-status-to-enum
+      author: Armen Mirzoyan
+      changes:
+        - modifyDataType:
+            tableName: card
+            columnName: card_status
+            newDataType: VARCHAR(20)

@@ -5,7 +5,6 @@ import com.example.bankcards.entity.User;
 import com.example.bankcards.entity.UserRole;
 import java.util.List;
 import lombok.experimental.UtilityClass;
-import org.apache.commons.lang3.StringUtils;
 
 @UtilityClass
 public class CreateUserUtils {
@@ -22,7 +21,6 @@ public class CreateUserUtils {
             final String lastName,
             final String password,
             final String email) {
-        String fullName = StringUtils.isBlank(lastName) ? firstName : StringUtils.join(firstName, " ", lastName);
 
         User user = new User();
         user.setEmail(email);
