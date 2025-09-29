@@ -75,7 +75,7 @@ Backend-приложение на **Java Spring Boot** для управлени
 ---
 
 ## 🛠 Технологии
-- Java 17+ / 21
+- Java 21
 - Spring Boot, Spring Security, Spring Data JPA
 - JWT аутентификация
 - PostgreSQL / MySQL
