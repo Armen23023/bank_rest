@@ -2,6 +2,8 @@ package com.example.bankcards.service.impl;
 
 import com.example.bankcards.dto.signup.request.SignupRequestDto;
 import com.example.bankcards.entity.User;
+import com.example.bankcards.exception.ApiException;
+import static com.example.bankcards.exception.ErrorCode.EMAIL_ALREADY_EXISTS;
 import com.example.bankcards.repository.UserRepository;
 import com.example.bankcards.service.SignupService;
 import com.example.bankcards.util.CreateUserUtils;
@@ -23,8 +25,7 @@ public class SignupServiceImpl implements SignupService {
     @Transactional
     public void signup(SignupRequestDto request) {
         if(userRepository.existsByEmail(request.getEmail())) {
-            throw new IllegalArgumentException("email already exists");
-            //TODO: create own exception
+            throw new ApiException("Email already exists", EMAIL_ALREADY_EXISTS);
         }
         //create new user
         User user = CreateUserUtils.createNewUser(

@@ -14,7 +14,8 @@ public enum ErrorCode {
     CARD_EXPIRED("Card is expired.", HttpStatus.BAD_REQUEST),
     ACCESS_DENIED("Access denied.", HttpStatus.FORBIDDEN),
     INSUFFICIENT_FUNDS("Insufficient funds.", HttpStatus.BAD_REQUEST),
-    CARD_NOT_OWNED_BY_USER("Card not owned by User.", HttpStatus.BAD_REQUEST ),;
+    CARD_NOT_OWNED_BY_USER("Card not owned by User.", HttpStatus.BAD_REQUEST ),
+    EMAIL_ALREADY_EXISTS("Email already exists.", HttpStatus.BAD_REQUEST);
 
 
     private final String defaultMessage;

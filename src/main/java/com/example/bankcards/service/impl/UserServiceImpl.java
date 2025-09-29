@@ -102,10 +102,10 @@ public class UserServiceImpl implements UserService {
     public CardTransactionResponseDto transferBetweenCards(CardTransactionRequestDto request) {
         String currentUser = SecurityUtils.getCurrentUsername();
 
-        var sourceCard = cardRepository.findByRef(request.getOutputCardRef())
+        var sourceCard = cardRepository.findByRef(request.getFromCardRef())
                 .orElseThrow(() -> new ApiException(ErrorCode.CARD_NOT_FOUND));
 
-        var targetCard = cardRepository.findByRef(request.getInputCardRef())
+        var targetCard = cardRepository.findByRef(request.getToCardRef())
                 .orElseThrow(() -> new ApiException(ErrorCode.CARD_NOT_FOUND));
 
         if ( !sourceCard.getUser().getEmail().equals(currentUser)
