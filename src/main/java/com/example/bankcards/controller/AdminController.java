@@ -34,6 +34,7 @@ public class AdminController {
 
      private final AdminService adminService;
 
+
     @GetMapping(value = "/users")
     public Page<UserToAdminResponseDto> findUsers(
             final UserAdminSearchRequestDto search,

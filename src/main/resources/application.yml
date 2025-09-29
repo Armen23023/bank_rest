@@ -17,20 +17,17 @@ spring:
       ddl-auto: none
     show-sql: true
 
+springdoc:
+  swagger-ui:
+    path: /openapi/swagger-ui
+    url: /openapi-docs/openapi.yml
+  api-docs:
+    path: /openapi/api-docs
+
 #Jwt Configuration
-bank_rest:
+bank-rest:
   app:
     secret: u8g9VJ6k2nO3pQ1rX4yZ0aWbE5tVxYzB2cAqHjKlMnP=
     expirationMs: 3600000
     refresh-expiration: 86400000
-
-
-
-## application.yml — главный конфигурационный файл Spring Boot.
-#
-#Что нужно сделать:
-#  - Указать настройки подключения к базе данных.
-#  - Указать порт приложения.
-#  - Настроить параметры безопасности и JWT.
-#  - Включить Swagger UI.
 

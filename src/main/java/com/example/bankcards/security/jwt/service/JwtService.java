@@ -19,11 +19,11 @@ import org.springframework.stereotype.Service;
 @Slf4j
 @Service
 public class JwtService {
-    @Value("${bank_rest.app.secret}")
+    @Value("${bank-rest.app.secret}")
     private String jwtSecret;
-    @Value("${bank_rest.app.expirationMs}")
+    @Value("${bank-rest.app.expirationMs}")
     private long jwtExpirationInMs;
-    @Value("${bank_rest.app.refresh-expiration}")
+    @Value("${bank-rest.app.refresh-expiration}")
     private long refreshTokenExpirationInMs;
 
 
