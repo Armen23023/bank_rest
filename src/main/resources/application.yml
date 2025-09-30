@@ -27,7 +27,7 @@ springdoc:
 #Jwt Configuration
 bank-rest:
   app:
-    secret: u8g9VJ6k2nO3pQ1rX4yZ0aWbE5tVxYzB2cAqHjKlMnP=
+    secret: ${APP_JWT_SECRET}
     expirationMs: 3600000
     refresh-expiration: 86400000
 
