@@ -71,8 +71,9 @@ Backend-приложение на **Java Spring Boot** для управлени
 
 1. Клонируйте репозиторий:
    ```bash
-   git clone <your-repo-url>
-   cd <your-project-directory>
+   git clone https://github.com/Armen23023/bank_rest.git
+   cd bank_rest
+   
 2. Настройте application.yml для базы данных и JWT.
 
 3. Запустите приложение через Maven/Gradle или Docker Compose:
@@ -84,7 +85,7 @@ Backend-приложение на **Java Spring Boot** для управлени
 
   .Spring Boot приложение будет доступно на localhost:8080.
 
-  .Swagger UI: http://localhost:8080/openapi/swagger-ui.html
+  .Swagger UI: http://localhost:8080/openapi/swagger-ui/index.html#/
 
 4. Остановка сервисов:
 
