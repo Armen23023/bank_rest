@@ -74,7 +74,9 @@ Backend-приложение на **Java Spring Boot** для управлени
    git clone https://github.com/Armen23023/bank_rest.git
    cd bank_rest
    
-2. Настройте application.yml для базы данных и JWT.
+2. Настройте переменные окружения для базы данных и JWT:
+   Для JWT секретного ключа (APP_JWT_SECRET) используйте переменную окружения.
+   example("u8g9VJ6k2nO3pQ1rX4yZ0aWbE5tVxYzB2cAqHjKlMnP=")
 
 3. Запустите приложение через Maven/Gradle или Docker Compose:
 
