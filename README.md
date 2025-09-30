@@ -85,7 +85,7 @@ Backend-приложение на **Java Spring Boot** для управлени
 
   .Spring Boot приложение будет доступно на localhost:8080.
 
-  .Swagger UI: http://localhost:8080/openapi/swagger-ui.html
+  .Swagger UI: http://localhost:8080/openapi/swagger-ui/index.html#/
 
 4. Остановка сервисов:
 
