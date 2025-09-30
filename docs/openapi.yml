@@ -569,7 +569,6 @@ components:
         accessToken:
           type: string
           description: The access token that needs to be used on the service to access APIs
-          example: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2guZG9lIiwiaWF0IjoxNjkxNzA4MDAwfQ.dQw4w9WgXcQ
         refreshToken:
           type: string
           description: The refresh token that needs to be used to refresh access token
