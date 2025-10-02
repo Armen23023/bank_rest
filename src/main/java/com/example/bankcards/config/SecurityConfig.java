@@ -50,11 +50,11 @@ public class SecurityConfig {
                                                    DaoAuthenticationProvider authenticationProvider) throws Exception {
         http
                 .csrf(AbstractHttpConfigurer::disable)
-                .cors(cors-> cors.configurationSource(corsConfigurationSource) ) // enables CORS
+                .cors(cors-> cors.configurationSource(corsConfigurationSource) )
                 .authorizeHttpRequests(req -> req
-                        .requestMatchers("/api/v1/signup/**").permitAll() // allow signup
-                        .requestMatchers("/api/v1/signin").permitAll()   // allow signin
-                        .requestMatchers("/api/v1/refresh").permitAll()   // allow signin
+                        .requestMatchers("/api/v1/signup/**").permitAll()
+                        .requestMatchers("/api/v1/signin").permitAll()
+                        .requestMatchers("/api/v1/refresh").permitAll()
                         .requestMatchers(
                                 "/openapi/swagger-ui.html",
                                 "/openapi/swagger-ui/**",
